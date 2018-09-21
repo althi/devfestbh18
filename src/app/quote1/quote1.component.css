@@ -1,0 +1,40 @@
+.quote1{
+  background: url("../../assets/img/quote1.jpg") no-repeat center ;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #fc4757;
+  background-attachment: fixed; 
+}
+
+.container{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    width: 45%;
+}
+
+.quote{
+  font-family: 'Roboto', sans-serif;
+  color: white;
+  font-size: 2.6rem;
+  line-height:3.2rem;
+  font-weight: 700;
+}
+
+
+@media (max-width: 576px) { 
+  .quote{
+      font-size: 1rem;
+      line-height:1.2rem;
+      font-weight: 700;
+    }
+    
+}
+
+@media (max-width: 768px) { 
+  .quote{
+      font-size: 1.4rem;
+      line-height:1.6rem;
+      font-weight: 700;
+    }
+}
+

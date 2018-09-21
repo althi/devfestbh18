@@ -1,0 +1,27 @@
+<div class="speakers" id="speakers">
+  <div class="container">
+    <div class="speakers-header">
+    <h1>Palestrantes</h1>
+    <p class="subtitle">Essa grade de palestras está linda demais!</p>
+    </div>
+
+    <div class="row">
+      <div class="col-md-4" *ngFor="let speaker of speakers | async">
+        <div class="speaker">
+          <div class="speaker-photo">
+            <img class="img-fluid" src={{speaker.photo}} alt="{{speaker.alt}}"/>
+          </div>
+        <div class="spekaer-data">
+        <p class="speaker-name">{{speaker.name}}</p>
+        <p class="speaker-lastName">{{speaker.lastName}}</p>
+        <p>{{speaker.role}}</p>
+  
+        <img class="d-block img-fluid enterprise" src="{{speaker.enterprise}}" alt="{{speaker.enterprisealt}}"/>
+      </div>
+      </div>
+      </div>
+    </div>
+    <h1>Call4papers</h1>
+    <p>O nosso call4papers ainda está aberto! <a href="https://docs.google.com/forms/d/e/1FAIpQLSfKmpzuzW72FiVjP6-mnyzWt2KXRUFJAp_5Hiy0DSA1E8VHGg/viewform" target="_blank">Inscreva sua proposta de palestra!</a></p>  
+  </div>
+</div>

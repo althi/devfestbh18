@@ -1,0 +1,117 @@
+/* --------------------------------------------------------
+DEVFEST BH WEBSITE
+version: 1.0
+author: Thiago Almeida Martins Marques
+email: thiagomartins.marques@gmail.com
+website: http://thiagoam.com
+----------------------------------------------------------*/
+
+html, 
+body {
+  height: 100%;
+}
+
+
+.container-home{
+  padding-top: 10%;
+  padding-bottom: 5%;
+}
+
+.home {
+  margin: 0;
+  padding: 0 auto;
+  background: url("../../assets/img/home_bg.png") no-repeat center ;
+  background-size: cover;
+  overflow: hidden;
+  background-color: #250F27;
+  height: 100vh;
+}
+
+p{
+  font-family: 'Roboto Mono', monospace;
+  color: white;
+}
+
+.ball-container {
+  width: 250px;
+  height: 20px;
+  margin-bottom: 10px;
+}
+
+.center-ball{
+  padding-left: 56px;
+}
+
+.ball {
+  width: 15px;
+  height: 15px;
+  margin: 15px auto;
+  float: left;
+  border-radius: 50px;
+}    
+.ball:nth-child(1) {
+  margin: 15px;
+  background: #1e90ff;
+  -webkit-animation: top 1s infinite ease-in-out;
+  -moz-animation: top 1s infinite ease-in-out;
+  animation: top 1s infinite ease-in-out;    
+}
+
+.ball:nth-child(2) {
+  margin: 15px;
+  background: #ff4757;
+  -webkit-animation: top 1.1s infinite ease-in-out;
+  -moz-animation: top 1.1s infinite ease-in-out;
+  animation: top 1.1s infinite ease-in-out;
+}
+
+.ball:nth-child(3) {
+  margin: 15px;
+  background: #2ed573;
+  -webkit-animation: top 1.05s infinite ease-in-out;
+  -moz-animation: top 1.05s infinite ease-in-out;
+  animation: top 1.05s infinite ease-in-out;
+}
+
+.ball:nth-child(4) {
+  margin: 15px;
+  background: #ffd32a;
+  -webkit-animation: top 1.15s infinite ease-in-out;
+  -moz-animation: top 1.15s infinite ease-in-out;
+  animation: top 1.15s infinite ease-in-out;
+}
+
+@-webkit-keyframes top {
+  0%   { -webkit-transform: translate(-20px, -20px);   }
+  50%  { -webkit-transform: translate(-20px, 20px);    }
+  100% { -webkit-transform: translate(-20px, -20px);   }
+}
+
+
+@keyframes top {
+  0%   { transform: translate(-20px, -20px);  }
+  50%  { transform: translate(-20px, 20px);   }
+  100% { transform: translate(-20px, -20px);  }
+}
+
+
+@media only screen and (max-width: 1235px) {
+
+@-webkit-keyframes top {
+  0%   { -webkit-transform: translate(-20px, -15px);   }
+  50%  { -webkit-transform: translate(-20px, 15px);    }
+  100% { -webkit-transform: translate(-20px, -15px);   }
+}
+
+
+@keyframes top {
+  0%   { transform: translate(-20px, -15px);  }
+  50%  { transform: translate(-20px, 15px);   }
+  100% { transform: translate(-20px, -15px);  }
+}
+}
+
+
+
+/*PAGE*/
+

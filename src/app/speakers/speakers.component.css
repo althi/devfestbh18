@@ -1,0 +1,49 @@
+.speakers{
+    background-color: #250F27;
+    color: white;
+    padding: 80px 0;
+}
+
+.speakers-header{
+    margin-bottom: 48px;
+}
+
+h1{
+    color: white;
+}
+
+.speaker{
+    margin-bottom: 48px;
+    border: solid 1px white;
+}
+
+.spekaer-data{
+    padding: 24px;
+}
+
+.speaker-photo{
+    width: 100%; 
+    overflow: hidden; 
+  
+}
+
+.speaker-photo img{
+  width: auto;
+  min-height: 400px; 
+}
+
+
+
+.speaker-name{
+    font-size: 48px;
+    line-height: 35px;
+}
+
+.speaker-lastName{
+    font-size: 24px;
+}
+
+.enterprise{
+    max-width: 120px;
+    max-height: 40px;
+}

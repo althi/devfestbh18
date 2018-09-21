@@ -1,0 +1,73 @@
+<div class="home">
+
+
+
+    <div class="container container-home">
+        <div class="py-5 text-center">
+    <!--<div class="ball-container center">
+			<div class="center-ball">
+				<div class="ball"></div><div class="ball"></div><div class="ball"></div><div class="ball"></div>
+			</div>
+		</div>-->
+		  <img class="d-block mx-auto mb-4" src="../../assets/img/logo.png" alt="Logotipo do DevFest BH 2018" width="350" height="auto">
+		  <p>10 de Novembro - no The One Business Center - Raja/BH</p>
+		  <a href="http://gdgbh.eventos.pw/" target="_blank" class="btn btn-success" role="button" aria-pressed="true">Comprar meu ingresso</a>
+        </div>
+	</div>
+	
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-123761487-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-123761487-1');
+</script>
+
+<script type="text/javascript">
+	function openPatrocinar() {
+		console.log("click openPatrocinar");
+		var element = document.getElementById("patrocinar");
+		element.classList.remove("patrocinar");
+		element.classList.add("patrocinar-open");
+		var palestrantes = document.getElementById("palestrantes");
+		palestrantes.classList.add("palestrantes-open");
+		palestrantes.classList.remove("palestrantes-closed");
+	};
+
+	function openPalestrar() {
+		console.log("click openPalestrar");
+		var element = document.getElementById("palestrar");
+		element.classList.remove("palestrar");
+		element.classList.add("palestrar-open");
+		var palestrantes = document.getElementById("palestrantesPalestra");
+		palestrantes.classList.add("palestrantes-open");
+		palestrantes.classList.remove("palestrantes-closed");
+	};
+
+	function closePatrocinar() {
+		console.log("click closePatrocinar");
+		var element = document.getElementById("patrocinar");
+		element.classList.remove("patrocinar-open");
+		element.classList.add("patrocinar");
+		var palestrantes = document.getElementById("palestrantes");
+		palestrantes.classList.add("palestrantes-closed");
+		palestrantes.classList.remove("palestrantes-open");    
+	};
+
+	function closePalestrar() {
+		console.log("click closePalestrar");
+		var element = document.getElementById("palestrar");
+		element.classList.remove("palestrar-open");
+		element.classList.add("palestrar");  
+		var palestrantes = document.getElementById("palestrantesPalestra");
+		palestrantes.classList.add("palestrantes-closed");
+		palestrantes.classList.remove("palestrantes-open");    
+	}
+</script>
+
+
+
+

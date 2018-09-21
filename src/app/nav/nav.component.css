@@ -1,0 +1,17 @@
+.bg-black-transp{
+    background-color:rgba(1,1,1,0.4);
+}
+
+.bg-black-transp a{
+    color: #fff;
+}
+
+.bg-black-transp a:hover{
+    color: #FC4757;
+}
+
+.logo-topo{
+    height: 50px;
+    width: auto;
+    margin-right: 30px;
+}
