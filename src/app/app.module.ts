@@ -19,6 +19,7 @@ import { TicketsComponent } from './tickets/tickets.component';
 import { FooterComponent } from './footer/footer.component';
 import { EventComponent } from './event/event.component';
 import { GdgbhComponent } from './gdgbh/gdgbh.component';
+import { PlaceComponent } from './place/place.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { GdgbhComponent } from './gdgbh/gdgbh.component';
     TicketsComponent,
     FooterComponent,
     EventComponent,
-    GdgbhComponent
+    GdgbhComponent,
+    PlaceComponent
     
   ],
   imports: [

@@ -13,5 +13,6 @@ export class SpeakersComponent {
   speakers: Observable<any[]>;
   constructor(db: AngularFirestore) {
     this.speakers = db.collection('speakers').valueChanges();
+  
   }
 }
