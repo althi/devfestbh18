@@ -20,6 +20,8 @@ import { FooterComponent } from './footer/footer.component';
 import { EventComponent } from './event/event.component';
 import { GdgbhComponent } from './gdgbh/gdgbh.component';
 import { PlaceComponent } from './place/place.component';
+import { CoductCodeComponent } from './coduct-code/coduct-code.component';
+import { Quote5Component } from './quote5/quote5.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +40,9 @@ import { PlaceComponent } from './place/place.component';
     FooterComponent,
     EventComponent,
     GdgbhComponent,
-    PlaceComponent
+    PlaceComponent,
+    CoductCodeComponent,
+    Quote5Component
     
   ],
   imports: [

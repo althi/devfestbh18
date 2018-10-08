@@ -23,13 +23,14 @@ h1{
 
 .speaker-photo{
     width: 100%; 
+    height: auto; 
     overflow: hidden; 
   
 }
 
 .speaker-photo img{
-  width: auto;
-  min-height: 400px; 
+  width: 100%;
+  height: auto;
 }
 
 
