@@ -12,7 +12,7 @@ import { Observable } from 'rxjs';
 export class SpeakersComponent {
   speakers: Observable<any[]>;
   constructor(db: AngularFirestore) {
-    this.speakers = db.collection('speakers').valueChanges();
+    this.speakers = db.collection('speakers', ref => ref.orderBy('name')).valueChanges();
   
   }
 }
