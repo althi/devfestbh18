@@ -11,6 +11,9 @@ body {
   height: 100%;
 }
 
+.soldOut{
+  color: white;
+}
 
 .container-home{
   padding-top: 10%;
