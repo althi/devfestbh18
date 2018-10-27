@@ -22,6 +22,7 @@ import { GdgbhComponent } from './gdgbh/gdgbh.component';
 import { PlaceComponent } from './place/place.component';
 import { CoductCodeComponent } from './coduct-code/coduct-code.component';
 import { Quote5Component } from './quote5/quote5.component';
+import { ScheduleComponent } from './schedule/schedule.component';
 
 @NgModule({
   declarations: [
@@ -42,7 +43,8 @@ import { Quote5Component } from './quote5/quote5.component';
     GdgbhComponent,
     PlaceComponent,
     CoductCodeComponent,
-    Quote5Component
+    Quote5Component,
+    ScheduleComponent
     
   ],
   imports: [
