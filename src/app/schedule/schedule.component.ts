@@ -1,15 +1,17 @@
 import { Component, OnInit } from '@angular/core';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-schedule',
   templateUrl: './schedule.component.html',
   styleUrls: ['./schedule.component.css']
 })
-export class ScheduleComponent implements OnInit {
 
-  constructor() { }
-
-  ngOnInit() {
+export class ScheduleComponent {
+  speakers: Observable<any[]>;
+  constructor(db: AngularFirestore) {
+    this.speakers = db.collection('speakers', ref => ref.orderBy('name')).valueChanges();
+  
   }
-
 }

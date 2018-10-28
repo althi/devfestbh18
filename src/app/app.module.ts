@@ -23,6 +23,7 @@ import { PlaceComponent } from './place/place.component';
 import { CoductCodeComponent } from './coduct-code/coduct-code.component';
 import { Quote5Component } from './quote5/quote5.component';
 import { ScheduleComponent } from './schedule/schedule.component';
+import { ModalSpeakerComponent } from './modal-speaker/modal-speaker.component';
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { ScheduleComponent } from './schedule/schedule.component';
     PlaceComponent,
     CoductCodeComponent,
     Quote5Component,
-    ScheduleComponent
+    ScheduleComponent,
+    ModalSpeakerComponent
     
   ],
   imports: [
@@ -52,9 +54,11 @@ import { ScheduleComponent } from './schedule/schedule.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireModule,
     AngularFirestoreModule,
-    AngularFireStorageModule  
+    AngularFireStorageModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
+
+
 export class AppModule { }

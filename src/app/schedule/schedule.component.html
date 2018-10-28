@@ -1,10 +1,153 @@
-<section class="schedule">
-  <div class="container-fluid" id="programacao">
-    <div class="container">
-      <h1>Programação</h1>
-      
-       
+<section class="schedule-container">
+  <div class="" id="schedule">
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+    Launch demo modal
+  </button>
+  
+  <div class="schedule">
+        <!-- Row 1 - Headings -->
+        <p class="day no-border"></p>
+        <p class="day day-1">Palco 1</p>
+        <p class="day day-2">Palco 2</p>
+        <p class="day day-3">Palco 3</p>
+        <p class="day day-4">Palco 4</p>
+        <p class="day day-5 no-border">Palco 5</p>
+        
+        <!-- Row 2 - Dates -->
+        <p class="date no-border"></p>
+        <p class="date"><strong>17 Aug |</strong> Thurs</p>
+        <p class="date"><strong>18 Aug |</strong> Fri</p>
+        <p class="date"><strong>19 Aug |</strong> Sat</p>
+        <p class="date"><strong>20 Aug |</strong> Sun</p>
+        <p class="date no-border"><strong>21 Aug |</strong> Mon</p>
+        
+        <!-- Times -->
+        <p class="time">7:30</p>
+        <p class="time">9:00</p>
+        <p class="time">09:20</p>
+        <p class="time">10:00</p>
+        <p class="time">10:30</p>
+        <p class="time">11:20</p>
+        <p class="time">12:00</p>
+        <p class="time">13:30</p>
+        <p class="time">14:20</p>
+        <p class="time">15:10</p>
+        <p class="time">16:00</p>
+        <p class="time">16:40</p>
+        <p class="time">17:10</p>
+        <p class="time">18:00</p>
+    
+     <ng-container *ngFor="let speaker of speakers | async">
+     <div class="seminar {{speaker.class}}" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+          <p class="seminar-title">{{speaker.talk}}</p>
+          <p class="seminar-location">{{speaker.name}} {{speaker.lastName}}</p>
+     </div>
+
+
+     <div class="modal fade" id="{{speaker.name}}{{speaker.lastName}}" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">{{speaker.talk}}</h5>
+             
+              <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="row">
+                  <div class="col-md-12">
+                    <p class="subtitle">{{speaker.talkDescription}}</p>
+                  </div>  
+              </div>
+              <h4 class="mt-3 know-speaker">Conheça {{speaker.name}} {{speaker.lastName}}</h4>
+              <div class="row">
+              <div class="col-md-6">
+                  <div class="speaker-photo-modal">
+                      <img class="img-fluid speaker-photo-modal-inside" src={{speaker.photo}} alt="{{speaker.alt}}"/>
+                    </div>
+              </div>
+              <div class="col-md-6">
+                  <p class="subtitle">{{speaker.bio}}</p>
+              </div>
+            </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </ng-container>   
+     
+     <!-- Lugares extras -->
+
+     <div class="seminar register" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+        <p class="seminar-title">Credenciamento</p>
+        <p class="seminar-location">07:30 às 09:00</p>
+   </div>
+
+
+   <!-- ######### PAULA FARIA E MARCELA LOBATO #######-->
+   <div class="seminar stage2 talk3" data-toggle="modal" data-target="#paulaemarcela">
+      <p class="seminar-title">Do Design System ao Styleguide</p>
+      <p class="seminar-location">Paula Faria e Marcela Lobato</p>
+ </div> 
+
+ <div class="modal fade" id="paulaemarcela" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Do Design System ao Styleguide</h5>
+         
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-md-12">
+                <p class="subtitle">Aprenda a construir um sistema de componentes para produtos</p>
+              </div>  
+          </div>
+          <h4 class="mt-3 know-speaker">Conheça Paula Faria</h4>
+          <div class="row">
+          <div class="col-md-6">
+              <div class="speaker-photo-modal">
+                  <img class="img-fluid speaker-photo-modal-inside" src={{speaker.photo}} alt="{{speaker.alt}}"/>
+                </div>
+          </div>
+          <div class="col-md-6">
+              <p class="subtitle">{{speaker.bio}}</p>
+          </div>
+        </div>
+        <hr>
+        <h4 class="mt-3 know-speaker">Conheça Marcela Lobato</h4>
+          <div class="row">
+          <div class="col-md-6">
+              <div class="speaker-photo-modal">
+                  <img class="img-fluid speaker-photo-modal-inside" src={{speaker.photo}} alt="{{speaker.alt}}"/>
+                </div>
+          </div>
+          <div class="col-md-6">
+              <p class="subtitle">{{speaker.bio}}</p>
+          </div>
+        </div>
+        </div>
+
+      </div>
     </div>
   </div>
+
+    
+  </div>
+ 
+  
+  
+
+    
+      </div>
 </section>
+
+
 
