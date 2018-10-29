@@ -1,11 +1,5 @@
 <section class="schedule-container">
   <div class="" id="schedule">
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
   <div class="schedule">
         <!-- Row 1 - Headings -->
         <p class="day no-border"></p>
@@ -15,13 +9,9 @@
         <p class="day day-4">Palco 4</p>
         <p class="day day-5 no-border">Palco 5</p>
         
-        <!-- Row 2 - Dates -->
-        <p class="date no-border"></p>
-        <p class="date"><strong>17 Aug |</strong> Thurs</p>
-        <p class="date"><strong>18 Aug |</strong> Fri</p>
-        <p class="date"><strong>19 Aug |</strong> Sat</p>
-        <p class="date"><strong>20 Aug |</strong> Sun</p>
-        <p class="date no-border"><strong>21 Aug |</strong> Mon</p>
+      
+   
+      
         
         <!-- Times -->
         <p class="time">7:30</p>
@@ -40,7 +30,7 @@
         <p class="time">18:00</p>
     
      <ng-container *ngFor="let speaker of speakers | async">
-     <div class="seminar {{speaker.class}}" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+     <div [hidden]="speaker.hidden" class="seminar {{speaker.class}}" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
           <p class="seminar-title">{{speaker.talk}}</p>
           <p class="seminar-location">{{speaker.name}} {{speaker.lastName}}</p>
      </div>
@@ -81,15 +71,106 @@
     </ng-container>   
      
      <!-- Lugares extras -->
-
      <div class="seminar register" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
         <p class="seminar-title">Credenciamento</p>
         <p class="seminar-location">07:30 às 09:00</p>
    </div>
 
+   <div class="seminar finishing" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+      <p class="seminar-title">Encerramento + sorteios</p>
+      <p class="seminar-location">Organização do GDG BH</p>
+ </div>
+
+
+ <div class="seminar coffee-morning" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+    <p class="seminar-title">Coffee break</p>
+    <p class="seminar-location">Organização do GDG BH</p>
+</div>
+
+<div class="seminar coffee-afternoon" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+    <p class="seminar-title">Coffee break + Foto de todo mundo!</p>
+    <p class="seminar-location">Organização do GDG BH</p>
+</div>
+
+<div class="seminar lightningtalk1" data-toggle="modal" data-target="#lightningtalk">
+    <p class="seminar-title">Lightning Talk Sessão 1</p>
+    <p class="seminar-location">Participantes do DevFest</p>
+</div>
+
+<div class="seminar lightningtalk2" data-toggle="modal"  data-target="#lightningtalk">
+    <p class="seminar-title">Lightning Talk Sessão 2</p>
+    <p class="seminar-location">Participantes do DevFest</p>
+</div>
+
+
+
+<div class="seminar lunch" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+    <p class="seminar-title">Horário para o almoço</p>
+    <p class="seminar-location">Externo ao evento</p>
+</div>
+
+
+<div class="seminar opening" data-toggle="modal" [attr.data-target]="'#'+speaker.name+speaker.lastName">
+    <p class="seminar-title">Abertura</p>
+    <p class="seminar-location">GDG BH</p>
+</div>
+
 
    <!-- ######### PAULA FARIA E MARCELA LOBATO #######-->
    <div class="seminar stage2 talk3" data-toggle="modal" data-target="#paulaemarcela">
+      <p class="seminar-title">Do Design System ao Styleguide</p>
+      <p class="seminar-location">Paula Faria e Marcela Lobato</p>
+ </div> 
+
+  <div class="modal fade" id="paulaemarcela" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Do Design System ao Styleguide</h5>
+          
+            <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col-md-12">
+                  <p class="subtitle">Aprenda a construir um sistema de componentes para produtos</p>
+                </div>  
+            </div>
+            <h4 class="mt-3 know-speaker">Conheça Paula Faria</h4>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="speaker-photo-modal">
+                    <img class="img-fluid speaker-photo-modal-inside" src="http://www.devfestbh.com/assets/img/speakers/paula.jpg" alt="{{speaker.alt}}"/>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <p class="subtitle">Programming teacher and front-end developer @MaxMilhas</p>
+            </div>
+          </div>
+          <hr>
+          <h4 class="mt-3 know-speaker">Conheça Marcela Lobato</h4>
+            <div class="row">
+            <div class="col-md-6">
+                <div class="speaker-photo-modal">
+                    <img class="img-fluid speaker-photo-modal-inside" src={{speaker.photo}} alt="{{speaker.alt}}"/>
+                  </div>
+            </div>
+            <div class="col-md-6">
+                <p class="subtitle">Sou UX Designer. Sou Cela Desenha. Mas meu sonho mesmo era ser cover da Paola Bracho. </p>
+            </div>
+          </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+
+  
+   <!-- ######### PAULA FARIA E MARCELA LOBATO #######-->
+   <div class="seminar stage5 talk2" data-toggle="modal" data-target="#paulaemarcela">
       <p class="seminar-title">Do Design System ao Styleguide</p>
       <p class="seminar-location">Paula Faria e Marcela Lobato</p>
  </div> 
@@ -114,11 +195,11 @@
           <div class="row">
           <div class="col-md-6">
               <div class="speaker-photo-modal">
-                  <img class="img-fluid speaker-photo-modal-inside" src={{speaker.photo}} alt="{{speaker.alt}}"/>
+                  <img class="img-fluid speaker-photo-modal-inside" src="http://www.devfestbh.com/assets/img/speakers/paula.jpg" alt="{{speaker.alt}}"/>
                 </div>
           </div>
           <div class="col-md-6">
-              <p class="subtitle">{{speaker.bio}}</p>
+              <p class="subtitle">Programming teacher and front-end developer @MaxMilhas</p>
           </div>
         </div>
         <hr>
@@ -130,7 +211,7 @@
                 </div>
           </div>
           <div class="col-md-6">
-              <p class="subtitle">{{speaker.bio}}</p>
+              <p class="subtitle">Sou UX Designer. Sou Cela Desenha. Mas meu sonho mesmo era ser cover da Paola Bracho. </p>
           </div>
         </div>
         </div>
@@ -139,7 +220,34 @@
     </div>
   </div>
 
-    
+
+   <!-- ######### PAULA FARIA E MARCELA LOBATO #######-->
+
+ <div class="modal fade" id="lightningtalk" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Lightning talks</h5>
+         
+          <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="row">
+              <div class="col-md-12">
+                <p class="subtitle">As Lightning Talks são palestras rápidas sobre algum assunto de interesse das/os participantes do DevFest Belo Horizonte. As pessoas terão a oportunidade de subir ao palco e compartilhar suas ideias! Em breve iremos liberar um formulário de inscrição!</p>
+              </div>  
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!----------->
+  
+
   </div>
  
   
